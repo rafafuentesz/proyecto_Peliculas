@@ -112,7 +112,7 @@ body {
 
 .container {
   background-color: #151515;
-  min-height: calc(100vh - 50px);
+  min-height: 100vh;
   color: white;
 }
 
@@ -150,21 +150,22 @@ body {
 }
 
 .movie-list-wrapper {
-  position: relative;
-  overflow: hidden;
+  display: flex;
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
 }
 
 .movie-list {
-  display: flex;
+  display: inline-flex;
+  flex-direction: row;
   align-items: center;
-  height: 300px;
-  transform: translateX(0);
-  transition: all 1s ease-in-out;
+  margin-right: 10px;
 }
 
 .movie-list-item {
-  margin-right: 30px;
   position: relative;
+  text-align: center;
 }
 
 .movie-list-item:hover .movie-list-item-img {
@@ -197,6 +198,7 @@ body {
   left: 50px;
   opacity: 0;
   transition: 1s all ease-in-out;
+  margin-bottom: 10px;
 }
 
 .movie-list-item-desc {
@@ -246,7 +248,6 @@ body {
 
 .navbar-container.active {
   background-color: white;
-
   color: black;
 }
 
